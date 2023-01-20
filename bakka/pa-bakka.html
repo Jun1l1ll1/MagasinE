@@ -44,7 +44,7 @@
     <div class="tilToppenKnapp f" onclick="tilTopps()"><span>Til Tops</span><img src="../hovedBilder/mobil/tlf-tilTop-ikon.png" alt="Til Tops"/></div>
 
     <div id="skrollMeny" class="usynlig">
-        <a href="../index.html">
+        <a href="../index.html" tabindex="-1">
             <img src="../hovedBilder/pc/pc-menyLogoRod.png" alt="Magasin E logo" class="skrollMenyLogo pc"/>
             <img src="../hovedBilder/mobil/tlf-logoRod.png" alt="Magasin E logo" class="skrollMenyLogo tlf"/>
         </a>
@@ -82,7 +82,7 @@
 
 
 
-    <!-- HEADER -->
+    <!--* HEADER -->
     <div class="header fullWidth"> 
         <div class="headImg">
             <img src="../hovedBilder/pc/pc-paBakka-hovedbilde.png" style="height: 100%;" alt="">
@@ -92,27 +92,27 @@
         </a>
         
         <img src="../hovedBilder/pc/pc-menyBakgrunn.png" id="menyBak" class="menyBakgrunn" alt=""/>
-        <a href="../index.html">
+        <a href="../index.html" tabindex="-1">
             <img src="../hovedBilder/pc/pc-menyLogoRod.png" class="menyBakgrunnLogo" alt="Magasin E logo"/> 
         </a>    
         <!-- Knapper i menyen -->
         <div class="menyInnhold"> 
             <div class="menyLeft">
                 <div class="bakka-dropdown">
-                    <div class="paBakka-knapp menyKnapp f" onclick="location.href='../bakka/pa-bakka.html';">På Bakka</div>
-                    <div class="femPaBakka-knapp menyKnapp underKnapp" onclick="location.href='../bakka/fem-pa-bakka/katFemBakka.html';">5 på Bakka</div>
+                    <a href="../bakka/pa-bakka.html" class="noLink"><div class="paBakka-knapp menyKnapp f">På Bakka</div></a>
+                    <a href="../bakka/fem-pa-bakka/katFemBakka.html" class="noLink"><div class="femPaBakka-knapp menyKnapp underKnapp">5 på Bakka</div></a>
                 </div>
                 
-                <div class="samf-knapp menyKnapp" onclick="location.href='../samfunn/katSamf.html';">Samf. og Debatt</div>
+                <a href="../samfunn/katSamf.html" class="noLink"><div class="samf-knapp menyKnapp">Samf. og Debatt</div></a>
             
             </div>
             <div class="menyRight">
 
-                <div class="kreativt-knapp menyKnapp" onclick="location.href='../kreativt/katKreativt.html';">Kreativt</div>
+                <a href="../kreativt/katKreativt.html" class="noLink"><div class="kreativt-knapp menyKnapp">Kreativt</div></a>
 
                 <div class="om-dropdown">
-                    <div class="omOss-knapp menyKnapp" onclick="location.href='../om/om.html';">Om Oss</div>
-                    <div class="kontakt-knapp menyKnapp underKnapp" onclick="location.href='../om/kont.html';">Kontakt</div>
+                    <a href="../om/om.html" class="noLink"><div class="omOss-knapp menyKnapp">Om Oss</div></a>
+                    <a href="../om/kont.html" class="noLink"><div class="kontakt-knapp menyKnapp underKnapp">Kontakt</div></a>
                 </div>
                 
                 <div class="sok-dropdown">
@@ -179,10 +179,10 @@
 
 
         <!--* 5 på Bakka -->
-        <div class="femPaBakkaBox" onclick="location.href='../bakka/fem-pa-bakka/katFemBakka.html';">
+        <a href="../bakka/fem-pa-bakka/katFemBakka.html" class="noLink"><div class="femPaBakkaBox">
             <div class="overskriftTekst"><b>5 på Bakka</b></div>
             text text text
-        </div>
+        </div></a>
 
 
 
@@ -293,24 +293,24 @@
             <div class="overskriftTekst"><b>Kategorier</b></div>
             <div class="slideshowCont">
                 <div class="gridContKat" id="moveMeOnArrowClick">
-                    <div class="GridItemKat"><div class="katBox pic" onclick="location.href='../bakka/pa-bakka.html';" id="onKat">
+                    <a href="../bakka/pa-bakka.html" class="noLink"><div class="GridItemKat"><div class="katBox pic" onclick="location.href='../bakka/pa-bakka.html';" id="onKat">
                         <img class="katBilde" src="../hovedBilder/-katBakkaBilde.png" alt="">
                         <img class="bakkaBilde katBilde" src="../hovedBilder/-katBakkaBildeoverlag.png" alt="">
                         <img class="bakkaBildeHover katBilde" src="../hovedBilder/-katBakkaBildeoverlag-hover.png" alt="">
                         <h1 class="katText katTextBakka">På Bakka</h1>
-                    </div></div>
+                    </div></div></a>
 
-                    <div class="GridItemKat"><div class="katBox pic" onclick="location.href='../samfunn/katSamf.html';" id="sKat">
+                    <a href="../samfunn/katSamf.html" class="noLink"><div class="GridItemKat"><div class="katBox pic" onclick="location.href='../samfunn/katSamf.html';" id="sKat">
                         <img class="samfBilde katBilde" src="../hovedBilder/-katSamfBildeoverlag.png" alt="">
                         <img class="samfBildeHover katBilde" src="../hovedBilder/-katSamfBildeoverlag-hover.png" alt="">
                         <h1 class="katText katTextSamf">Samf. & Debatt</h1>
-                    </div></div>
+                    </div></div></a>
 
-                    <div class="GridItemKat"><div class="katBox pic" onclick="location.href='../kreativt/katKreativt.html';" id="kKat">
+                    <a href="../kreativt/katKreativt.html" class="noLink"><div class="GridItemKat"><div class="katBox pic" onclick="location.href='../kreativt/katKreativt.html';" id="kKat">
                         <img class="kreativtBilde katBilde" src="../hovedBilder/-katKreativtBildeoverlag.png" alt="">
                         <img class="kreativtBildeHover katBilde" src="../hovedBilder/-katKreativtBildeoverlag-hover.png" alt="">
                         <h1 class="katText katTextKreativt">Kreativt</h1>
-                    </div></div>
+                    </div></div></a>
                 </div>
             </div>
         
@@ -333,7 +333,7 @@
 
 
 
-        <div class="malEksBox pic" onclick="location.href='../malOgEks/malOgEks.html'"> <!--TODO Sett en lenke -->
+        <a href="../malOgEks/malOgEks.html" class="noLink"><div class="malEksBox pic" onclick="location.href='../malOgEks/malOgEks.html'"> <!--TODO Sett en lenke -->
             <div class="overskriftTekst"><b>Maler & eksempler</b></div>
             <div class="hideContent pic">
                 <img src="" alt=""/>
@@ -341,7 +341,7 @@
                 <img class="malEksOverlag malEksHoverlag" src="../hovedBilder/-malEksBildeverlag-hover.png" alt=""/>
                 <h1><b>Ta en kikk!</b></h1>
             </div>
-        </div>
+        </div></a>
 
 
 
@@ -431,7 +431,7 @@
         <div  class="footer">
             <div class="footContent">
                 <img src="../hovedbilder/pc/pc-footerBakgrunn.png" alt=""/>
-                <a href="../redigering/rediger.html" class="adminURL">
+                <a href="https://magasine.sanity.studio/" target="_blank" class="adminURL">
                     Administrator
                 </a><br>
             </div>
