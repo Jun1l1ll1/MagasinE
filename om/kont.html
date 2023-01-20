@@ -1,0 +1,208 @@
+<html lang="no">
+<head>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/menyOgHead.css">
+    <link rel="stylesheet" href="../styles/kategori.css">
+    <link rel="stylesheet" href="../styles/artikkler.css">
+
+    <link rel="stylesheet" href="../styles/kat/kont.css">
+
+    <link rel="icon" type="image/x-icon" href="../hovedBilder/favicon.ico">
+    <title>Kontakt Oss</title>
+</head>
+<body onscroll="visFolgeMeny()">
+    <script src="../styles/styleScript.js"></script>
+
+
+
+    <div class="darkenScreen" onclick="hamMeny()">
+        <div class="tlfMenyBox">
+            <div class="tlfMenyGrid">
+                <div class="tlfMenyItem" id="tlfMenyHjem" onclick="location.href='../index.html';">
+                    Hjem
+                </div>
+                <div class="tlfMenyItem" id="tlfMenyBakka">
+                    <div onclick="location.href='bakka/pa-bakka.html';">På Bakka</div>
+                    <div class="tlfMenyUnderitem" onclick="location.href='../bakka/fem-pa-bakka/katFemBakka.html';">5 på Bakka</div>
+                </div>
+                <div class="tlfMenyItem" id="tlfMenySamf" onclick="location.href='../samfunn/katSamf.html';">
+                    Samf. & Debatt
+                </div>
+                <div class="tlfMenyItem" id="tlfMenyKrea" onclick="location.href='../kreativt/katKreativt.html';">
+                    Kreativt
+                </div>
+                <div class="tlfMenyItem" id="tlfMenyOm">
+                    <div onclick="location.href='../om/om.html';">Om Oss</div>
+                    <div class="tlfMenyUnderitem" onclick="location.href='../om/kont.html';">Kontakt</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="tilToppenKnapp" onclick="tilTopps()"><span>Til Tops</span><img src="../hovedBilder/mobil/tlf-tilTop-ikon.png" alt="Til Tops"/></div>
+
+    <div id="skrollMeny" class="usynlig">
+        <a href="../index.html">
+            <img src="../hovedBilder/pc/pc-menyLogoBakkabla.png" class="skrollMenyLogo pc" alt="Magasin E logo"/>
+            <img src="../hovedBilder/mobil/tlf-logoBakkaBla.png" class="skrollMenyLogo tlf" alt="Magasin E logo"/>
+        </a>
+
+        <div class="menyRight" style="padding-top: 15px;"> 
+            <div class="bakka-dropdown">
+                <div class="paBakka-knapp menyKnapp skrollMenyKnappSize" onclick="location.href='../bakka/pa-bakka.html';">På Bakka</div>
+                <div class="femPaBakka-knapp menyKnapp skrollUnderKnapp" onclick="location.href='../bakka/fem-pa-bakka/katFemBakka.html';">5 på Bakka</div>
+            </div>
+
+            <div class="samf-knapp menyKnapp skrollMenyKnappSize" onclick="location.href='../samfunn/katSamf.html';">Samf. og Debatt</div>
+
+            <div class="kreativt-knapp menyKnapp skrollMenyKnappSize" onclick="location.href='../kreativt/katKreativt.html';">Kreativt</div>
+
+            <div class="om-dropdown">
+                <div class="omOss-knapp menyKnapp skrollMenyKnappSize" onclick="location.href='../om/om.html';">Om Oss</div>
+                <div class="kontakt-knapp menyKnapp skrollUnderKnapp f" onclick="location.href='../om/kont.html';">Kontakt</div>
+            </div>
+
+            <div class="sok-dropdown">
+                <img class="sokSymbol menyKnapp skrollMenySokSize" onclick="visSokBox('sSok')" src="../hovedBilder/-sok-ikon.png" alt="Søk">
+                <div class="sokBox skrollMenyKnappSize" id="sSok">
+                    <label for="scrollSok">Søkefelt</label>
+                    <input id="scrollSok" class="sokInp"/> <!-- input-en til søking -->
+                    <div onclick="sokEtter()" class="sokKnapp"></div>
+                </div>
+            </div>
+
+            <div onclick="hamMeny()">
+                <img src="../hovedBilder/mobil/tlf-hamburgerMeny-ikon.png" class="hamburgerMeny tlf hamMenyE" alt="Meny"/>
+                <img src="../hovedBilder/mobil/tlf-skulHamburgerMeny-ikon.png" class="hamburgerMeny tlf hamMenyX" style="width: 46px;" alt="Meny"/>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- HEADER -->
+    <div class="header fullWidth"> 
+        <div class="headImg">
+            <img src="../hovedBilder/-hjem-hovedbilde.png" style="height: 100%;" alt="">
+        </div>
+        <a href="../index.html" style="position: absolute; top: 10px; left: 10px;">
+            <img src="../hovedBilder/-hjem-ikon.png" style="width: 5%;" alt="Hjem">
+        </a>
+        
+        <img src="../hovedBilder/pc/pc-menyBakgrunn.png" id="menyBak" class="menyBakgrunn" alt=""/>
+        <a href="../index.html">
+            <img src="../hovedBilder/pc/pc-menyLogoBakkabla.png" class="menyBakgrunnLogo" alt="Magasin E logo"/> 
+        </a>    
+        <!-- Knapper i menyen -->
+        <div class="menyInnhold"> 
+            <div class="menyLeft">
+                <div class="bakka-dropdown">
+                    <div class="paBakka-knapp menyKnapp" onclick="location.href='../bakka/pa-bakka.html';">På Bakka</div>
+                    <div class="femPaBakka-knapp menyKnapp underKnapp" onclick="location.href='../bakka/fem-pa-bakka/katFemBakka.html';">5 på Bakka</div>
+                </div>
+                
+                <div class="samf-knapp menyKnapp" onclick="location.href='../samfunn/katSamf.html';">Samf. og Debatt</div>
+            
+            </div>
+            <div class="menyRight">
+
+                <div class="kreativt-knapp menyKnapp" onclick="location.href='../kreativt/katKreativt.html';">Kreativt</div>
+
+                <div class="om-dropdown">
+                    <div class="omOss-knapp menyKnapp" onclick="location.href='../om/om.html';">Om Oss</div>
+                    <div class="kontakt-knapp menyKnapp underKnapp f" onclick="location.href='../om/kont.html';">Kontakt</div>
+                </div>
+                
+                <div class="sok-dropdown">
+                    <img class="sokSymbol menyKnapp pc" onclick="visSokBox('mSok')" src="../hovedBilder/-sok-ikon.png" alt="Søk">
+                    <div class="sokBox" id="mSok">
+                        <label for="menySok">Søkefelt</label>
+                        <input id="menySok" class="sokInp"/> <!-- input-en til søking -->
+                        <div onclick="sokEtter()" class="sokKnapp"></div>
+                    </div>
+                </div>
+
+                <div onclick="hamMeny()">
+                    <img src="../hovedBilder/mobil/tlf-hamburgerMeny-ikon.png" class="hamburgerMeny tlf hamMenyE" alt="Meny"/>
+                    <img src="../hovedBilder/mobil/tlf-skulHamburgerMeny-ikon.png" class="hamburgerMeny tlf hamMenyX" style="width: 10vw;" alt="Meny"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--* MIDDLE -->
+    <div class="center"> 
+
+        <div id="kontText" style="margin-top: 20vw;">
+            Kontakt oss her<br>eller send mail til magasine.bakka@gmail.com
+        </div>
+
+        
+        <div style="margin-top: 5vw; width: 100%; position: relative;">
+            <p>*Obligatorisk</p>
+            <label for="kontNavnInp">Navn</label>
+            <input id="kontNavnInp" required placeholder="Navn"/>
+        </div>
+        
+        <div style="width: 100%; position: relative;">
+            <p>*Obligatorisk</p>
+            <label for="kontEpostInp">Email Adresse</label>
+            <input id="kontEpostInp" required placeholder="Email Adresse"/>
+        </div>
+
+        <label for="kontMeldInp">Melding</label>
+        <textarea id="kontMeldInp" placeholder="Melding"></textarea>
+
+        <div style="width: 100%; position: relative;">
+            <button id="kontTipsBtn" class="f">Tips Oss!</button>
+        </div>
+
+
+
+         
+        
+
+
+
+
+
+
+
+
+
+        <!--* FOOTER -->
+        <div  class="footer">
+            <div class="footContent">
+                <img src="../hovedbilder/pc/pc-footerBakgrunn.png" alt=""/>
+                <a href="redigering/rediger.html" class="adminURL">
+                    Administrator
+                </a><br>
+            </div>
+        </div>
+        
+        <div class="tlf footSpace"></div>
+    </div>
+
+
+</body>
+</html>

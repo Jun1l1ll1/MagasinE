@@ -1,0 +1,446 @@
+<html lang="no">
+<head>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/menyOgHead.css">
+    <link rel="stylesheet" href="styles/kategori.css">
+    <link rel="stylesheet" href="styles/artikkler.css">
+
+    <link rel="icon" type="image/x-icon" href="hovedBilder/favicon.ico">
+    <title>MagasinE</title>
+</head>
+<body onscroll="visFolgeMeny()">
+    <script src="styles/styleScript.js"></script>
+
+
+
+    <div class="darkenScreen" onclick="hamMeny()">
+        <div class="tlfMenyBox">
+            <div class="tlfMenyGrid">
+                <div class="tlfMenyItem" id="tlfMenyHjem" onclick="location.href='index.html';">
+                    Hjem
+                </div>
+                <div class="tlfMenyItem" id="tlfMenyBakka">
+                    <div onclick="location.href='bakka/pa-bakka.html';">På Bakka</div>
+                    <div class="tlfMenyUnderitem" onclick="location.href='bakka/fem-pa-bakka/katFemBakka.html';">5 på Bakka</div>
+                </div>
+                <div class="tlfMenyItem" id="tlfMenySamf" onclick="location.href='samfunn/katSamf.html';">
+                    Samf. & Debatt
+                </div>
+                <div class="tlfMenyItem" id="tlfMenyKrea" onclick="location.href='kreativt/katKreativt.html';">
+                    Kreativt
+                </div>
+                <div class="tlfMenyItem" id="tlfMenyOm">
+                    <div onclick="location.href='om/om.html';">Om Oss</div>
+                    <div class="tlfMenyUnderitem" onclick="location.href='om/kont.html';">Kontakt</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="tilToppenKnapp" onclick="tilTopps()"><span>Til Tops</span><img src="hovedBilder/mobil/tlf-tilTop-ikon.png" alt="Til Tops"/></div>
+
+    <!--* Skroll meny -->
+    <div id="skrollMeny" class="usynlig">
+        <a href="index.html" tabindex="-1">
+            <img src="hovedBilder/pc/pc-menyLogoBakkabla.png" class="skrollMenyLogo pc" alt="Magasin E logo"/>
+            <img src="hovedBilder/mobil/tlf-logoBakkaBla.png" class="skrollMenyLogo tlf" alt="Magasin E logo"/>
+        </a>
+
+        <div class="menyRight" style="padding-top: 15px;"> 
+            <div class="bakka-dropdown">
+                <div class="paBakka-knapp menyKnapp skrollMenyKnappSize" onclick="location.href='bakka/pa-bakka.html';">På Bakka</div>
+                <div class="femPaBakka-knapp menyKnapp skrollUnderKnapp" onclick="location.href='bakka/fem-pa-bakka/katFemBakka.html';">5 på Bakka</div>
+            </div>
+
+            <div class="samf-knapp menyKnapp skrollMenyKnappSize" onclick="location.href='samfunn/katSamf.html';">Samf. og Debatt</div>
+
+            <div class="kreativt-knapp menyKnapp skrollMenyKnappSize" onclick="location.href='kreativt/katKreativt.html';">Kreativt</div>
+
+            <div class="om-dropdown">
+                <div class="omOss-knapp menyKnapp skrollMenyKnappSize" onclick="location.href='om/om.html';">Om Oss</div>
+                <div class="kontakt-knapp menyKnapp skrollUnderKnapp" onclick="location.href='om/kont.html';">Kontakt</div>
+            </div>
+
+            <div class="sok-dropdown">
+                <img class="sokSymbol menyKnapp skrollMenySokSize" onclick="visSokBox('sSok')" src="hovedBilder/-sok-ikon.png" alt="Søk">
+                <div class="sokBox skrollMenyKnappSize" id="sSok">
+                    <label for="scrollSok">Søkefelt</label>
+                    <input id="scrollSok" class="sokInp"/> <!-- input-en til søking -->
+                    <div onclick="sokEtter()" class="sokKnapp"></div>
+                </div>
+            </div>
+
+            <div onclick="hamMeny()">
+                <img src="hovedBilder/mobil/tlf-hamburgerMeny-ikon.png" class="hamburgerMeny tlf hamMenyE" alt="Meny"/>
+                <img src="hovedBilder/mobil/tlf-skulHamburgerMeny-ikon.png" class="hamburgerMeny tlf hamMenyX" style="width: 46px;" alt="Meny"/>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!--* HEADER -->
+    <div class="header fullWidth"> 
+        <div class="headImg">
+            <img src="hovedBilder/-hjem-hovedbilde.png" style="height: 100%;" alt="">
+        </div>
+        <a href="index.html" style="position: absolute; top: 10px; left: 10px;">
+            <img src="hovedBilder/-hjem-ikon.png" style="width: 5%;" alt="Hjem">
+        </a>
+        
+        <!--* Meny -->
+        <img src="hovedBilder/pc/pc-menyBakgrunn.png" id="menyBak" class="menyBakgrunn"  alt=""/>
+        <a href="index.html" tabindex="-1">
+            <img src="hovedBilder/pc/pc-menyLogoBakkabla.png" class="menyBakgrunnLogo" alt="Magasin E logo"/> 
+        </a>    
+        <!-- Knapper i menyen -->
+        <div class="menyInnhold"> 
+            <div class="menyLeft">
+                <div class="bakka-dropdown">
+                    <a href="bakka/pa-bakka.html" class="noLink"><div class="paBakka-knapp menyKnapp">På Bakka</div></a>  <!-- TODO role: og tabindex: -->
+                    <a href="bakka/fem-pa-bakka/katFemBakka.html" class="noLink"><div class="femPaBakka-knapp menyKnapp underKnapp">5 på Bakka</div></a>
+                </div>
+                
+                <a href="samfunn/katSamf.html" class="noLink"><div class="samf-knapp menyKnapp">Samf. og Debatt</div></a>
+            
+            </div>
+            <div class="menyRight">
+
+                <a href="kreativt/katKreativt.html" class="noLink"><div class="kreativt-knapp menyKnapp" onclick="location.href='kreativt/katKreativt.html';">Kreativt</div></a>
+
+                <div class="om-dropdown">
+                    <a href="om/om.html" class="noLink"><div class="omOss-knapp menyKnapp" onclick="location.href='om/om.html';">Om Oss</div></a>
+                    <a href="om/kont.html" class="noLink"><div class="kontakt-knapp menyKnapp underKnapp" onclick="location.href='om/kont.html';">Kontakt</div></a>
+                </div>
+                
+                <div class="sok-dropdown">
+                    <img class="sokSymbol menyKnapp pc" onclick="visSokBox('mSok')" src="hovedBilder/-sok-ikon.png" alt="Søk">
+                    <div class="sokBox" id="mSok">
+                        <label for="menySok">Søkefelt</label>
+                        <input id="menySok" class="sokInp"/> <!-- input-en til søking -->
+                        <div onclick="sokEtter()" class="sokKnapp"></div>
+                    </div>
+                </div>
+
+                <div onclick="hamMeny()">
+                    <img src="hovedBilder/mobil/tlf-hamburgerMeny-ikon.png" class="hamburgerMeny tlf hamMenyE" alt="Meny"/>
+                    <img src="hovedBilder/mobil/tlf-skulHamburgerMeny-ikon.png" class="hamburgerMeny tlf hamMenyX" style="width: 10vw;" alt="Meny"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--* MIDDLE -->
+    <div class="center"> 
+
+        <!--* siste nytt -->
+        <div class="latestNewsBox pic">
+            <div class="overskriftTekst"><h3><b>Siste nytt</b></h3></div>
+            <div class="latestNewsBox-hiddencontent pic">
+                <img src="hovedBilder/pc/nyestArtikkelBildeoverlag/pc-graBildeoverlagNyeste.png" class="latestNewsOverlag" alt="">
+                <img src="hovedBilder/pc/nyestArtikkelBildeoverlag/pc-bildeoverlagNyeste-hover.png" class="latestNewsHover" style="width: 80%; position: absolute; bottom: 0px;" alt="">
+                
+                <div class="latestNewsTextBox">
+                    <div class="latestNewsOverskrift">Overskriftstekst</div>
+                    <div class="latestNewsUnderoverskrift">Underoverskriftstekst hei haei!</div>
+                    <div class="articInfo"> <!-- Bruker CSS fra "alle artikklene" -->
+                        <div style="float: left; display: flex; flex-direction: row;"><div class="articKat"><img src="hovedBilder/-kategori-ikon.png" alt="Kategori">Kategorier</div><div class="articKat"><img src="hovedBilder/-kategori-ikon.png" alt="Kategori">Kategorier</div></div>
+                        <div style="float: right;">1. November 2022</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!--* Kategorier -->
+
+        <div class="katSection">
+            <button class="katButton" id="leftArrowBox" onclick="katLeft()">
+                <img src="hovedBilder/mobil/tlf-katPilVenstre-closed.png" id="leftArrowImgClosed" alt="Forrige kategori i bildekarusellen"/>
+                <img src="hovedBilder/mobil/tlf-katPilVenstre-open.png" id="leftArrowImg" alt="Forrige kategori i bildekarusellen"/>
+            </button>
+            <button class="katButton" id="rightArrowBox" onclick="katRight()">
+                <img src="hovedBilder/mobil/tlf-katPilHoyre-closed.png" id="rightArrowImgClosed" alt="Neste kategori i bildekarusellen"/>
+                <img src="hovedBilder/mobil/tlf-katPilHoyre-open.png" id="rightArrowImg"  alt="Neste kategori i bildekarusellen"/>
+            </button>
+
+            <div class="overskriftTekst"><h3><b>Kategorier</b></h3></div>
+            <div class="slideshowCont">
+                <div class="gridContKat" id="moveMeOnArrowClick">
+                    <a href="bakka/pa-bakka.html" class="noLink"><div class="GridItemKat"><div class="katBox pic" id="onKat">
+                        <img class="katBilde" src="hovedBilder/-katBakkaBilde.png" alt="">
+                        <img class="bakkaBilde katBilde" src="hovedBilder/-katBakkaBildeoverlag.png" alt="">
+                        <img class="bakkaBildeHover katBilde" src="hovedBilder/-katBakkaBildeoverlag-hover.png" alt="">
+                        <h1 class="katText katTextBakka">På Bakka</h1>
+                    </div></div></a>
+
+                    <a href="samfunn/katSamf.html" class="noLink"><div class="GridItemKat"><div class="katBox pic" id="sKat">
+                        <img class="samfBilde katBilde" src="hovedBilder/-katSamfBildeoverlag.png" alt="">
+                        <img class="samfBildeHover katBilde" src="hovedBilder/-katSamfBildeoverlag-hover.png" alt="">
+                        <h1 class="katText katTextSamf">Samf. & Debatt</h1>
+                    </div></div></a>
+
+                    <a href="kreativt/katKreativt.html" class="noLink"><div class="GridItemKat"><div class="katBox pic" id="kKat">
+                        <img class="kreativtBilde katBilde" src="hovedBilder/-katKreativtBildeoverlag.png" alt="">
+                        <img class="kreativtBildeHover katBilde" src="hovedBilder/-katKreativtBildeoverlag-hover.png" alt="">
+                        <h1 class="katText katTextKreativt">Kreativt</h1>
+                    </div></div></a>
+                </div>
+            </div>
+        
+            <div class="fade"></div>
+        </div>
+
+
+
+
+
+
+
+        <!--* 5 på Bakka -->
+        <a href="bakka/fem-pa-bakka/katFemBakka.html" class="noLink"><div class="femPaBakkaBox">
+            <div class="overskriftTekst"><h3><b>5 på Bakka</b></h3></div>
+            text text text
+        </div></a>
+
+
+
+
+
+
+
+        <!--* Artikklene -->
+        <div class="gridContArticles" style="margin-top: 24vw;">
+            <div class="overskriftTekst"><h3><b>Alle artikkler</b></h3></div>
+
+            <div class="GridItemArtic pic"><div class="articBox pic">
+                <img src="" alt=""> <!--TODO Dette er bildet, OBS: Lag artikkelene til bildestørrelse -->
+                <img src="hovedBilder/pc/standardBildeoverlag/pc-gulBla-Bildeoverlag.png" alt="" style="width: 100%; position: absolute; bottom: 0px;">
+                <img src="hovedBilder/pc/standardBildeoverlag/pc-bildeoverlag-hover.png" alt="" class="overlagHover" style="width: 100%; position: absolute; bottom: 0px;">
+                <div class="articTextBox">
+                    <div class="arcticOverskrift">Overskriftstekst</div>
+                    <div class="arcticUnderoverskrift">Underoverskriftstekst hei haei!</div>
+                    <div class="articInfo">
+                        <div style="float: left; display: flex; flex-direction: row;"><div class="articKat"><img src="hovedBilder/-kategori-ikon.png" alt="Kategori">Kategorier</div><div class="articKat"><img src="hovedBilder/-kategori-ikon.png" alt="Kategori">Kategorier</div></div>
+                        <div style="float: right;">31. Oktober 2022</div>
+                    </div>
+                </div>
+            </div></div>
+            <div class="GridItemArtic pic"><div class="articBox pic">
+                <img src="" alt="">
+                <img src="hovedBilder/pc/standardBildeoverlag/pc-rodGul-Bildeoverlag.png" alt="" style="width: 100%; position: absolute; bottom: 0px;">
+                <img src="hovedBilder/pc/standardBildeoverlag/pc-bildeoverlag-hover.png" alt="" class="overlagHover" style="width: 100%; position: absolute; bottom: 0px;">
+                <div class="articTextBox">
+                    <div class="arcticOverskrift">Overskriftstekst</div>
+                    <div class="arcticUnderoverskrift">Underoverskriftstekst hei haei!</div>
+                    <div class="articInfo">
+                        <div style="float: left; display: flex; flex-direction: row;"><div class="articKat"><img src="hovedBilder/-kategori-ikon.png" alt="Kategori">Kategorier</div><div class="articKat"><img src="hovedBilder/-kategori-ikon.png" alt="Kategori">Kategorier</div></div>
+                        <div style="float: right;">31. Oktober 2022</div>
+                    </div>
+                </div>
+            </div></div>
+            <div class="GridItemArtic pic"><div class="articBox pic">
+                <img src="" alt="">
+                <img src="hovedBilder/pc/standardBildeoverlag/pc-bla-Bildeoverlag.png" alt="" style="width: 100%; position: absolute; bottom: 0px;">
+                <img src="hovedBilder/pc/standardBildeoverlag/pc-bildeoverlag-hover.png" alt="" class="overlagHover" style="width: 100%; position: absolute; bottom: 0px;">
+                <div class="articTextBox">
+                    <div class="arcticOverskrift">Overskriftstekst</div>
+                    <div class="arcticUnderoverskrift">Underoverskriftstekst hei haei!</div>
+                    <div class="articInfo">
+                        <div style="float: left; display: flex; flex-direction: row;"><div class="articKat"><img src="hovedBilder/-kategori-ikon.png" alt="Kategori">Kategorier</div><!--<div class="articKat"><img src="hovedBilder/-kategori-ikon.png" alt="Kategori">Kategorier</div>--></div>
+                        <div style="float: right;">31. Oktober 2022</div>
+                    </div>
+                </div>
+            </div></div>
+            <div class="GridItemArtic pic"><div class="articBox pic">
+                <img src="" alt="">
+                <img src="hovedBilder/pc/standardBildeoverlag/pc-blaRod-Bildeoverlag.png" alt="" style="width: 100%; position: absolute; bottom: 0px;">
+                <img src="hovedBilder/pc/standardBildeoverlag/pc-bildeoverlag-hover.png" alt="" class="overlagHover" style="width: 100%; position: absolute; bottom: 0px;">
+                <div class="articTextBox">
+                    <div class="arcticOverskrift">Overskriftstekst</div>
+                    <div class="arcticUnderoverskrift">Underoverskriftstekst hei haei!</div>
+                    <div class="articInfo">
+                        <div style="float: left; display: flex; flex-direction: row;"><div class="articKat"><img src="hovedBilder/-kategori-ikon.png" alt="Kategori">Kategorier</div><div class="articKat"><img src="hovedBilder/-kategori-ikon.png" alt="Kategori">Kategorier</div></div>
+                        <div style="float: right;">31. Oktober 2022</div>
+                    </div>
+                </div>
+            </div></div>
+            <div class="GridItemArtic pic"><div class="articBox pic">
+                <img src="" alt="">
+                <img src="hovedBilder/pc/standardBildeoverlag/pc-graBildeoverlag.png" alt="" style="width: 100%; position: absolute; bottom: 0px;">
+                <img src="hovedBilder/pc/standardBildeoverlag/pc-bildeoverlag-hover.png" alt="" class="overlagHover" style="width: 100%; position: absolute; bottom: 0px;">
+                <div class="articTextBox">
+                    <div class="arcticOverskrift">Overskriftstekst</div>
+                    <div class="arcticUnderoverskrift">Underoverskriftstekst hei haei!</div>
+                    <div class="articInfo">
+                        <div style="float: left; display: flex; flex-direction: row;"><div class="articKat"><img src="hovedBilder/-kategori-ikon.png" alt="Kategori">Kategorier</div><div class="articKat"><img src="hovedBilder/-kategori-ikon.png" alt="Kategori">Kategorier</div></div>
+                        <div style="float: right;">31. Oktober 2022</div>
+                    </div>
+                </div>
+            </div></div>
+            <div class="GridItemArtic pic"><div class="articBox pic">
+                <img src="" alt="">
+                <img src="hovedBilder/pc/standardBildeoverlag/pc-graBildeoverlag.png" alt="" style="width: 100%; position: absolute; bottom: 0px;">
+                <img src="hovedBilder/pc/standardBildeoverlag/pc-bildeoverlag-hover.png" alt="" class="overlagHover" style="width: 100%; position: absolute; bottom: 0px;">
+                <div class="articTextBox">
+                    <div class="arcticOverskrift">Overskriftstekst</div>
+                    <div class="arcticUnderoverskrift">Underoverskriftstekst hei haei!</div>
+                    <div class="articInfo">
+                        <div style="float: left; display: flex; flex-direction: row;"><div class="articKat"><img src="hovedBilder/-kategori-ikon.png" alt="Kategori">Kategorier</div><div class="articKat"><img src="hovedBilder/-kategori-ikon.png" alt="Kategori">Kategorier</div></div>
+                        <div style="float: right;">31. Oktober 2022</div>
+                    </div>
+                </div>
+            </div></div>
+        </div>
+
+
+
+
+
+        <!--* Skrive for -->
+        <div class="skriveForTextBox">
+            <hr style="width:25vw; border: 2.5px solid black; border-radius: 50vw;">
+            <b>Vil DU skrive for MagasinE?</b><br>
+            Du kan sende artikler, bilder, kortfilmer, podcaster og hva annet<br>
+            du vil til magasine.bakka@gmail.com eller på <a href="kont.html">kontakt oss</a>.
+            <hr style="width:25vw; border: 2.5px solid black; border-radius: 50vw;">
+        </div>
+
+
+
+        <a href="malOgEks/malOgEks.html" class="noLink"><div class="malEksBox pic"> <!--TODO Sett en lenke -->
+            <div class="overskriftTekst"><b>Maler & eksempler</b></div>
+            <div class="hideContent pic">
+                <img src="" alt=""/>
+                <img class="malEksOverlag" src="hovedBilder/-malEksBildeverlag.png" alt=""/>
+                <img class="malEksOverlag malEksHoverlag" src="hovedBilder/-malEksBildeverlag-hover.png" alt=""/>
+                <h1><b>Ta en kikk!</b></h1>
+            </div>
+        </div></a>
+
+
+
+
+
+
+        <!--* Artikkler igjen -->
+        <div class="gridContArticles"  style="margin-top: 11vw;"><!--TODO Artikkler, skal kunne bli flere -->
+            <div class="GridItemArtic pic"><div class="articBox pic">
+                <img src="" alt="">
+                <img src="hovedBilder/pc/standardBildeoverlag/pc-graBildeoverlag.png" alt="" style="width: 100%; position: absolute; bottom: 0px;">
+                <img src="hovedBilder/pc/standardBildeoverlag/pc-bildeoverlag-hover.png" alt="" class="overlagHover" style="width: 100%; position: absolute; bottom: 0px;">
+                <div class="articTextBox">
+                    <div class="arcticOverskrift">Overskriftstekst</div>
+                    <div class="arcticUnderoverskrift">Underoverskriftstekst hei haei!</div>
+                    <div class="articInfo">
+                        <div style="float: left; display: flex; flex-direction: row;"><div class="articKat"><img src="hovedBilder/-kategori-ikon.png" alt="Kategori">Kategorier</div><div class="articKat"><img src="hovedBilder/-kategori-ikon.png" alt="Kategori">Kategorier</div></div>
+                        <div style="float: right;">31. Oktober 2022</div>
+                    </div>
+                </div>
+            </div></div>
+            <div class="GridItemArtic pic"><div class="articBox pic">
+                <img src="" alt="">
+                <img src="hovedBilder/pc/standardBildeoverlag/pc-graBildeoverlag.png" alt="" style="width: 100%; position: absolute; bottom: 0px;">
+                <img src="hovedBilder/pc/standardBildeoverlag/pc-bildeoverlag-hover.png" alt="" class="overlagHover" style="width: 100%; position: absolute; bottom: 0px;">
+                <div class="articTextBox">
+                    <div class="arcticOverskrift">Overskriftstekst</div>
+                    <div class="arcticUnderoverskrift">Underoverskriftstekst hei haei!</div>
+                    <div class="articInfo">
+                        <div style="float: left; display: flex; flex-direction: row;"><div class="articKat"><img src="hovedBilder/-kategori-ikon.png" alt="Kategori">Kategorier</div><div class="articKat"><img src="hovedBilder/-kategori-ikon.png" alt="Kategori">Kategorier</div></div>
+                        <div style="float: right;">31. Oktober 2022</div>
+                    </div>
+                </div>
+            </div></div>
+            <div class="GridItemArtic pic"><div class="articBox pic">
+                <img src="" alt="">
+                <img src="hovedBilder/pc/standardBildeoverlag/pc-graBildeoverlag.png" alt="" style="width: 100%; position: absolute; bottom: 0px;">
+                <img src="hovedBilder/pc/standardBildeoverlag/pc-bildeoverlag-hover.png" alt="" class="overlagHover" style="width: 100%; position: absolute; bottom: 0px;">
+                <div class="articTextBox">
+                    <div class="arcticOverskrift">Overskriftstekst</div>
+                    <div class="arcticUnderoverskrift">Underoverskriftstekst hei haei!</div>
+                    <div class="articInfo">
+                        <div style="float: left; display: flex; flex-direction: row;"><div class="articKat"><img src="hovedBilder/-kategori-ikon.png" alt="Kategori">Kategorier</div><div class="articKat"><img src="hovedBilder/-kategori-ikon.png" alt="Kategori">Kategorier</div></div>
+                        <div style="float: right;">31. Oktober 2022</div>
+                    </div>
+                </div>
+            </div></div>
+            <div class="GridItemArtic pic"><div class="articBox pic">
+                <img src="" alt="">
+                <img src="hovedBilder/pc/standardBildeoverlag/pc-graBildeoverlag.png" alt="" style="width: 100%; position: absolute; bottom: 0px;">
+                <img src="hovedBilder/pc/standardBildeoverlag/pc-bildeoverlag-hover.png" alt="" class="overlagHover" style="width: 100%; position: absolute; bottom: 0px;">
+                <div class="articTextBox">
+                    <div class="arcticOverskrift">Overskriftstekst</div>
+                    <div class="arcticUnderoverskrift">Underoverskriftstekst hei haei!</div>
+                    <div class="articInfo">
+                        <div style="float: left; display: flex; flex-direction: row;"><div class="articKat"><img src="hovedBilder/-kategori-ikon.png" alt="Kategori">Kategorier</div><div class="articKat"><img src="hovedBilder/-kategori-ikon.png" alt="Kategori">Kategorier</div></div>
+                        <div style="float: right;">31. Oktober 2022</div>
+                    </div>
+                </div>
+            </div></div>
+        </div>
+
+        <div style="width: 100vw; position: relative; margin-top: 5vw;">
+            <div class="seMerKnappBox">
+                <button class="seMerKnapp" onclick=""><b>Se mer</b></button> <!--TODO Skal vise flere artikkler -->
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         <!--* FOOTER -->
+        <div  class="footer">
+            <div class="footContent">
+                <img src="hovedbilder/pc/pc-footerBakgrunn.png" alt=""/>
+                <a href="https://magasine.sanity.studio/" target="_blank" class="adminURL">
+                    Administrator
+                </a><br>
+            </div>
+        </div>
+
+        <div class="tlf footSpace"></div>
+
+    </div>
+
+    
+    
+</body>
+</html>

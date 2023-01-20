@@ -1,0 +1,218 @@
+
+.katSection {
+    margin-top: 17vw;
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap;
+    position: relative;
+}
+.slideshowCont {
+    width: 100%;
+    height: auto;
+}
+
+.katButton {
+    display: none;
+}
+
+.gridContKat {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    height: 24vw;
+    /*margin-top: 170px;*/
+    position: relative;
+}
+.gridItemKat {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+.katBox {
+    background-color: #414042;
+    width: 24vw;
+    height: 24vw;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    cursor: pointer;
+}
+/* Bildene til kategoriene */
+.katBilde {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}.katText {
+    font-size: 2.5vw;
+    position: absolute;
+    text-align: left;
+    padding: 20px;
+    width: 100%;
+    bottom: 10px;
+}
+.bakkaBildeHover {
+    opacity: 0;
+}.katBox:hover .bakkaBilde {
+    opacity: 0;
+}.katBox:hover .bakkaBildeHover {
+    opacity: 1;
+}.katBox:hover .katTextBakka {
+    left: 0px;
+    width: 100%;
+    bottom: 40px;
+    padding: 0;
+    text-align: center;
+}
+.samfBildeHover {
+    opacity: 0;
+}.katBox:hover .samfBilde {
+    opacity: 0;
+}.katBox:hover .samfBildeHover {
+    opacity: 1;
+}.katBox:hover .katTextSamf {
+    left: 0px;
+    width: 100%;
+    bottom: 40px;
+    padding: 0;
+    text-align: center;
+}
+.kreativtBildeHover {
+    opacity: 0;
+}.katBox:hover .kreativtBilde {
+    opacity: 0;
+}.katBox:hover .kreativtBildeHover {
+    opacity: 1;
+}.katBox:hover .katTextKreativt {
+    left: 0px;
+    width: 100%;
+    bottom: 40px;
+    padding: 0;
+    text-align: center;
+}
+
+
+
+
+
+.femPaBakkaBox {
+    border: 5px solid lightgray;
+    border-radius: 2vw;
+    width: 70vw;
+    margin-top: 18%;
+    cursor: pointer;
+
+    text-align: center;
+    padding: 0.7vw 0;
+
+    font-size: 5vw;
+    position: relative;
+    transition: 0.25s;
+}.femPaBakkaBox:hover {
+    width: 72vw;
+    padding: 1.1vw 0;
+}
+
+
+
+
+/* dropdownmeny */
+.bakka-dropdown {
+    background-color: none;
+    width: fit-content;
+}.bakka-dropdown:hover .femPaBakka-knapp {
+    display: block;
+}.femPaBakka-knapp {
+    display: none;
+}
+
+.om-dropdown {
+    background-color: none;
+    width: fit-content;
+}.om-dropdown:hover .kontakt-knapp {
+    display: block;
+}.kontakt-knapp {
+    display: none;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 775px) {
+
+    .fade {
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255,255,255,1) 10%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 75%, rgba(255,255,255,1) 90%, rgb(255, 255, 255) 100%);
+    }
+
+    .slideshowCont {
+        width: 50vw;
+        height: 50vw;
+    }
+    
+    .katButton {
+        display: block;
+        width: 7vw;
+        height: 25%;
+        background-color: rgb(0,0,0,0);
+        top: 37.5%;
+        border: none;
+        position: absolute;
+        z-index: 1;
+    }
+    
+    #leftArrowBox {
+        left: 3vw;
+    }#rightArrowBox {
+        right: 3vw;
+    }
+
+    .katButton img {
+        width: 4.5vw;
+    }
+
+    #leftArrowImg {
+        cursor: pointer;
+        display: none;
+    } #leftArrowImgClosed {
+        cursor: default;
+        display: block;
+    }
+    #rightArrowImg {
+        cursor: pointer;
+        display: block;
+    } #rightArrowImgClosed {
+        cursor: default;
+        display: none;
+    }
+
+
+
+    
+    .gridContKat {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 5vw;
+        width: 100%;
+        height: 100%;
+    }
+    .katBox {
+        width: 50vw;
+        height: 50vw;
+    }.katText {
+        font-size: 4vw;
+    }.katOverflow {
+        overflow: hidden; 
+        width: 50vw;
+    }
+
+
+
+}

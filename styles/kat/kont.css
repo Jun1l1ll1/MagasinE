@@ -1,0 +1,117 @@
+.f {
+    background-color: #4A9CFF;
+}
+.f:hover {
+    background-color: #4083db;
+}
+
+
+
+
+
+
+
+
+#kontText {
+    width: 100%;
+    font-size: 3vw;
+}
+
+
+
+
+
+.center input, .center button, .center textarea {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 5px solid lightgray;
+    border-radius: 1vw;
+    padding: 1vw;
+    font-size: 1.5vw;
+    margin-bottom: 2vw;
+}
+.center p {
+    position: absolute;
+    top: -2vw;
+    font-size: 1vw;
+    left: 7.5%;
+    color: #4A9CFF;
+}
+
+
+
+
+#kontNavnInp {
+    width: 50%;
+    height: 4vw;
+    float: left;
+}
+
+#kontEpostInp {
+    width: 100%;
+    height: 4vw;
+}
+
+#kontMeldInp {
+    width: 100%;
+    height: 20vw;
+    min-width: 100%;
+    min-height: 4vw;
+}
+
+#kontTipsBtn {
+    border: none;
+    color: white;
+    font-size: 3vw;
+    position: absolute;
+    right: 7.5%;
+}
+
+
+
+
+@media only screen and (max-width: 775px) {
+
+    #kontText {
+        font-size: 5vw;
+    }
+
+
+
+    
+    .center input, .center button, .center textarea {
+        padding: 2vw;
+        font-size: 3vw;
+        border-radius: 2vw;
+        margin-bottom: 5vw;
+    }
+    .center p {
+        top: -5.2vw;
+        font-size: 2.5vw;
+        left: 7.5%;
+    }
+
+
+
+
+    #kontNavnInp {
+        width: 75%;
+        height: 9vw;
+        float: left;
+    }
+    
+    #kontEpostInp {
+        width: 100%;
+        height: 9vw;
+    }
+    
+    #kontMeldInp {
+        width: 100%;
+        height: 30vw;
+        min-width: 100%;
+        min-height: 9vw;
+    }
+
+    #kontTipsBtn {
+        font-size: 7vw;
+    }
+}

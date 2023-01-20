@@ -1,0 +1,290 @@
+
+
+.latestNewsBox {
+    background-color: lightblue;
+    height: 50vw;
+    margin-top: 17.5vw;
+    flex: 0 0 100%;
+    position: relative;
+    cursor: pointer;
+}
+.latestNewsBox-hiddencontent {
+    overflow: hidden; 
+    position: relative;
+    height: 100%; 
+    width: 100%; 
+}
+
+.latestNewsOverlag {
+    width: 75%; 
+    position: absolute; 
+    bottom: 0px;
+}
+.latestNewsHover {
+    opacity: 0;
+}.latestNewsBox-hiddencontent:hover .latestNewsHover {
+    opacity: 1;
+}
+
+.latestNewsTextBox {
+    margin: 2%;
+    width: 70%;
+    height: 22.5%;
+    color: white;
+
+    position: absolute;
+    bottom: 0;
+}
+.latestNewsOverskrift {
+    font-size: 5.5vw;
+}.latestNewsUnderoverskrift {
+    opacity: 0;
+    font-size: 3vw;
+}
+.latestNewsBox-hiddencontent:hover .latestNewsTextBox {
+    height: 35%;
+}.latestNewsBox-hiddencontent:hover .latestNewsUnderoverskrift {
+    opacity: 1;
+}.latestNewsBox-hiddencontent:hover .latestNewsOverskrift {
+    font-size: 5vw;
+}.latestNewsBox-hiddencontent:hover .articInfo {
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+/* Alle artikler del */
+
+.gridContArticles {
+    display: grid;
+    grid-gap: 70px;
+    grid-template-columns: auto auto;
+    width: 100%;
+    position: relative;
+    
+}
+.gridItemArtic {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+.articBox {
+    background-color: lightblue;
+    width: 100%;   /* 35.65vw */
+    height: 25vw;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+
+
+
+/* text på artikklene */
+.articTextBox {
+    margin: 2%;
+    width: 96%;
+    height: 25%;
+    color: white;
+
+    position: absolute;
+    bottom: 0;
+}
+.arcticOverskrift {
+    font-size: 4vw;
+}.arcticUnderoverskrift {
+    opacity: 0;
+    font-size: 2vw;
+}
+.articInfo {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.25vw;
+}.articKat {
+    padding-left: 1.5vw;
+    position: relative;
+}.articKat img {
+    width: 1.75vw;
+    opacity: .25;
+    position: absolute;
+    left: .75vw;
+}
+
+
+
+
+/* hover */
+.articBox:hover .articInfo {
+    opacity: 0;
+}.articBox:hover .articTextBox {
+    height: 35%;
+}.articBox:hover .arcticOverskrift {
+    font-size: 3vw;
+}.articBox:hover .arcticUnderoverskrift {
+    opacity: 1;
+}
+
+
+.overlagHover {
+    opacity: 0;
+}.articBox:hover .overlagHover {
+    opacity: 1;
+}
+
+
+/* Knapp */
+.seMerKnappBox {
+    width: 8.5vw; 
+    height: 4.25vw; 
+    position: absolute; 
+    right: 10%; 
+    display: flex; 
+    justify-content: center;
+}
+.seMerKnapp {
+    width: 8vw; 
+    height: 4vw; 
+    background-color: white; 
+    cursor: pointer;
+
+    border: 5px solid lightgray; 
+    border-radius: 1vw; 
+
+    font-size: 1.5vw; 
+    color: #414042;
+
+    transition: .25s;
+} .seMerKnapp:hover {
+    width: 8.5vw;
+    height: 4.25vw;
+    font-size: 1.6vw;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 775px) {
+
+    .latestNewsBox {
+        margin-top: 30vw;
+    }
+    .latestNewsOverlag {
+        width: 110%;
+    }
+    .latestNewsTextBox {
+        width: 95%;
+        height: 35%;
+    }
+    .latestNewsOverskrift {
+        font-size: 6.5vw;
+    }.latestNewsUnderoverskrift {
+        opacity: 1;
+        font-size: 3.25vw;
+    }
+    
+
+
+
+
+
+
+
+    .gridContArticles {
+        grid-template-columns: auto;
+    }
+
+    .articBox {
+        height: 50vw;
+    }
+
+    .articTextBox {
+        width: 96%;
+        height: 32%;
+    }
+    .arcticOverskrift {
+        font-size: 6vw;
+    }
+    .arcticUnderoverskrift {
+        font-size: 3vw;
+        opacity: 1;
+    }
+    .articInfo {
+        font-size: 1.875vw;  /*      pc + pc/2 = mobil       */
+    }
+    .articKat img {
+        width: 2.625vw;
+        left: .5vw;
+    }
+
+
+
+
+
+
+    .seMerKnappBox {
+        width: 15.5vw; 
+        height: 7.25vw; 
+    }
+    .seMerKnapp {
+        width: 15vw; 
+        height: 7vw; 
+        font-size: 3vw; 
+    } .seMerKnapp:hover {
+        width: 15.5vw;
+        height: 7.25vw;
+        font-size: 3.15vw;
+    }
+
+
+
+
+
+
+
+
+
+    /*
+        ********
+        No Hover 
+        ********
+    */
+
+    .latestNewsBox-hiddencontent:hover .latestNewsHover { 
+        opacity: 0;
+    }.latestNewsBox-hiddencontent:hover .latestNewsTextBox {
+        height: 35%;
+    }.latestNewsBox-hiddencontent:hover .latestNewsUnderoverskrift {
+        opacity: 1;
+        font-size: 3.25vw;
+    }.latestNewsBox-hiddencontent:hover .latestNewsOverskrift {
+        font-size: 6.5vw;
+    }.latestNewsBox-hiddencontent:hover .articInfo {
+        opacity: 1;
+    }
+
+
+    .articBox:hover .articInfo {
+        opacity: 1;
+    }.articBox:hover .articTextBox {
+        height: 32%;
+    }.articBox:hover .arcticOverskrift {
+        font-size: 6vw;
+    }.articBox:hover .arcticUnderoverskrift {
+        opacity: 1;
+    }.articBox:hover .overlagHover {
+        opacity: 0;
+    }
+}

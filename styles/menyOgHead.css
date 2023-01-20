@@ -1,0 +1,371 @@
+
+
+.darkenScreen {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.33);
+    z-index: 3;
+    left: 0;
+    top: 0;
+}.tlfMenyBox {
+    margin-left: 20vw;
+    margin-bottom: 100px;
+    bottom: 0px;
+    position: absolute;
+
+    width: 60vw;
+    height: 75vw;
+    background-color: #414042;
+    border-radius: 3vw;
+    
+}
+.tlfMenyGrid {
+    width: 90%;
+    height: 90%;
+    margin: 3vw;
+
+    font-size: 5.5vw;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: 1.5vw;
+    
+} .tlfMenyItem {
+    width: 84%;
+    height: 55%;
+    padding: 3%;
+    padding-left: 7vw;
+
+    background-color: white;
+    border-radius: 1vw;
+    position: relative;
+    cursor: pointer;
+
+}.tlfMenyUnderitem {
+    position: absolute;
+    left: 30vw;
+    top: 5vw;
+    padding: 1vw;
+    z-index: 3;
+
+    font-size: smaller;
+    border-radius: 1vw;
+    background-color: white;
+    box-shadow: 0 0 0 1vw #41404230;
+    cursor: pointer;
+}
+
+#tlfMenyHjem {
+    color: #414042;
+}
+#tlfMenyBakka {
+    color: #FF3333;
+    margin-bottom: 3vw;
+}
+#tlfMenySamf {
+    color: #2E9DE8;
+}
+#tlfMenyKrea {
+    color: #FFA727;
+}
+#tlfMenyOm {
+    color: #414042;
+}
+
+
+
+
+
+
+
+
+
+.header {
+    width: 100vw;
+    height: 250px;
+    background-color: white;
+    position: relative;
+}
+.headImg {
+    display: flex; 
+    justify-content: center;
+    height: 100%; 
+    width: 100vw; 
+    overflow: hidden;
+}
+
+.menyBakgrunn {
+    position: absolute; 
+    width: 100vw; 
+    top: 100%;
+}.menyBakgrunnLogo {
+    position: absolute; 
+    z-index: 1;
+    width: 35vw; 
+    top: 100%;
+    margin-left: 32.5vw;
+    transform: translateY(-65%);
+}
+.menyInnhold {
+    width: 98vw;
+    position: absolute;
+    top: 250px;
+    padding: 1vw;
+}.menyLeft {
+    float: left; 
+    display: flex; 
+    flex-direction: row;
+}.menyRight {
+    float: right; 
+    display: flex; 
+    flex-direction: row;
+}
+
+
+#skrollMeny {
+    width: 100%; 
+    height: 75px; 
+    margin-left: -10%; 
+    padding: 0; 
+    background-color: #414042; 
+    position: fixed; 
+    z-index: 2;
+}.skrollMenyLogo {
+    height: 80%; 
+    width: auto; 
+    top: 10px; 
+    padding-left: 25px;
+    position: absolute;
+}
+.synlig {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
+}
+.usynlig {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 100ms, opacity 300ms;
+}
+
+
+
+
+
+
+
+
+
+
+.menyKnapp {
+    background-color: none;
+    border-radius: 10px;
+    padding: 7px;
+    margin-right: 1vw;
+    width: fit-content;
+    height: fit-content;
+    color: white;
+    cursor: pointer;
+
+    font-size: 2.5vw;
+}.menyKnapp:hover {
+    background-color: black;
+}.underKnapp {
+    background-color: #414042;
+    font-size: 2vw;
+    margin: 0px;
+}
+.skrollMenyKnappSize {
+    font-size: 25px;
+}.skrollMenySokSize {
+    font-size: 25px;
+    width: 25px;
+    height: 25px;
+}.skrollUnderKnapp {
+    background-color: #414042;
+    font-size: 20px;
+    margin: 0px;
+}
+
+
+
+
+
+
+
+.sokSymbol {
+    width: 25px;
+    height: 25px;
+    bottom: 6.25px; /* tot. 75px */
+    right: 10px;
+}
+.menyInnhold .menyRight .sok-dropdown .sokSymbol {
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+
+
+.sok-dropdown {
+    background-color: none;
+    width: fit-content;
+}.sokBox {
+    position: absolute;
+    right: 1vw;
+
+    width: 35vw;
+    height: 6vw;
+    border-radius: 10px;
+    background-color: black;
+}
+#sSok{display: none;} #mSok{display: none;}
+.sokInp {
+    font-size: 3vw;
+    color: #414042;
+
+    position: absolute;
+    width: 80%;
+    height: 4vw;
+    top: 1vw;
+    left: 1vw;
+    border: none;
+    border-radius: 5px;
+}
+
+.sokKnapp {
+    background-color: #4A9CFF;
+    width: 4vw;
+    height: 4vw;
+    position: absolute;
+    right: 1vw;
+    top: 1vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 775px) {
+
+
+    #skrollMeny {
+        bottom: 0px;
+        background-color: #414042; 
+    }
+    .usynlig {
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+
+
+    .header {
+        height: 190px;
+    }
+    .menyInnhold {
+        top: 190px;
+    }
+
+
+
+
+
+    .hamburgerMeny {
+        width: 13vw;
+        top: 3vw;
+        right: 4vw;
+        position: absolute;
+        cursor: pointer;
+    }
+    #skrollMeny .menyRight .hamburgerMeny {
+        width: 60px;
+        top: 15px;
+        right: 10px;
+    }
+
+    .hamMenyE {
+        display: block;
+    } .hamMenyX {
+        display: none;
+    }
+    
+
+
+
+
+    .menyBakgrunn {
+        width: 150vw; 
+        top: 100%;
+    }
+    .menyBakgrunnLogo {
+        transform: translateY(0);
+        
+        width: 30vw; 
+        top: 105%;
+        left: -25vw;
+    }
+
+
+
+
+
+
+    .bakka-dropdown {
+        display: none;
+    }
+    .om-dropdown {
+        display: none;
+    }
+
+    .samf-knapp {
+        display: none;
+    }
+    .kreativt-knapp {
+        display: none;
+    }
+
+
+
+
+
+    .sokSymbol {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        bottom: 6.25px; /* tot. 75px */
+        right: 80px;
+    }
+    .sokBox {
+        right: 3.75vw;
+        bottom: 100px;
+        width: 92.5vw;
+        height: 15vw;
+    }.sokInp {
+        font-size: 7.5vw;
+        height: 10vw;
+        top: 2.5vw;
+        left: 2.5vw;
+    }.sokKnapp {
+        width: 10vw;
+        height: 10vw;
+        right: 2.5vw;
+        top: 2.5vw;
+    }
+
+}

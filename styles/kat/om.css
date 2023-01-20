@@ -1,0 +1,91 @@
+
+.f {
+    background-color: #4A9CFF;
+}
+.f:hover {
+    background-color: #4083db;
+}
+
+
+
+
+.omBox {
+    background-color: #daeffe;
+
+    width: 75%;
+    height: fit-content;
+    padding: 2vw;
+
+    font-size: 1.75vw;
+}
+
+
+
+
+
+/* Hvem styrer */
+
+.hvemGrid {
+    display: grid;
+    grid-gap: 2vw;
+    grid-template-columns: auto auto;
+    margin-top: 2vw;
+}
+
+.hvemGridItem {
+    display: grid;
+    grid-gap: 1vw;
+    grid-template-columns: auto auto;
+
+    height: fit-content;
+}
+
+.hvemPic {
+    width: fit-content;
+    height: fit-content;
+}.hvemPic img {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 1vw;
+}
+
+.hvemText {
+    width: 100%;
+    font-size: 1.5vw;
+}
+
+
+
+
+
+@media only screen and (max-width: 775px) {
+    .omBox {
+        width: 100%;
+        font-size: 3vw;
+    }
+
+
+
+
+
+    /* Hvem styrer */
+    .hvemGrid {
+        grid-gap: 3vw;
+        grid-template-columns: auto;
+        margin-left: 4vw;
+        margin-right: 4vw;
+    }
+
+    .hvemGridItem {
+        grid-gap: 3vw;
+    }
+
+    .hvemPic img {
+        width: 20vw;
+        height: 20vw;
+    }
+    .hvemText {
+        width: 100%;
+        font-size: 3vw;
+    }
+}
